@@ -1,0 +1,16 @@
+[user]
+	name = Zach Bray
+	email = zachbray@googlemail.com
+[core]
+	editor = vim
+[diff]
+	color = auto
+	tool = vimdiff
+[difftool]
+	prompt = false
+[difftool "vimdiff"]
+	cmd = vimdiff "$LOCAL" "$REMOTE"
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
