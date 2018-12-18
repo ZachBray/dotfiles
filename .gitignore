@@ -1,3 +1,5 @@
 *
 !.gitignore
 !.gitconfig
+!.tmux.conf
+!.zsh.rc
