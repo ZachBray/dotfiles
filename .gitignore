@@ -3,3 +3,5 @@
 !.gitconfig
 !.tmux.conf
 !.zsh.rc
+!scripts
+!scripts/*
