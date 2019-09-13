@@ -159,3 +159,6 @@ bar {
 # screenshot
 bindsym --release $mod+Shift+p exec gnome-screenshot -a -c
 
+# lock
+bindsym $mod+Ctrl+l exec i3lock
+
