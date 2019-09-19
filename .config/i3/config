@@ -165,3 +165,7 @@ bindsym $mod+Ctrl+l exec i3lock
 # auto-focus for things like clicking http links
 focus_on_window_activation focus
 
+# move workspaces to different monitors
+bindsym $mod+Ctrl+bracketleft move workspace to output right
+bindsym $mod+Ctrl+bracketright move workspace to output left
+
