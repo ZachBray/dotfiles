@@ -162,3 +162,6 @@ bindsym --release $mod+Shift+p exec gnome-screenshot -a -c
 # lock
 bindsym $mod+Ctrl+l exec i3lock
 
+# auto-focus for things like clicking http links
+focus_on_window_activation focus
+
