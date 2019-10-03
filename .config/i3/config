@@ -156,8 +156,8 @@ bar {
 }
 
 
-# screenshot
-bindsym --release $mod+Shift+p exec gnome-screenshot -a -c
+# screenshot + clipboard manager
+bindsym --release $mod+Shift+p exec "gnome-screenshot -a -f /tmp/screen.png && xclip -t image/png -sel clip < /tmp/screen.png"
 
 # lock
 bindsym $mod+Ctrl+l exec i3lock
@@ -168,4 +168,6 @@ focus_on_window_activation focus
 # move workspaces to different monitors
 bindsym $mod+Ctrl+bracketleft move workspace to output right
 bindsym $mod+Ctrl+bracketright move workspace to output left
+
+
 
