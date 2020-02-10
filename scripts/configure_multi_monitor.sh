@@ -14,6 +14,12 @@ if xrandr | grep connected | grep -q "^DP-1"; then
     xrandr --output DP-2 --right-of DP-1  
   fi
 
+  if xrandr | grep connected | grep -q "^DP-1-8"; then
+    echo "Configuring DP-1-8 monitor."
+    xrandr --output DP-1-8 --auto
+    xrandr --output DP-1-8 --right-of DP-2
+  fi
+
   xrandr --output eDP-1 --off
   i3 restart
 

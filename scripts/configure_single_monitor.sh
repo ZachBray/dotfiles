@@ -9,6 +9,7 @@ if echo $connected_monitors | grep -q "eDP-1"; then
   xrandr --output eDP-1 --auto
   xrandr --output DP-1 --off
   xrandr --output DP-2 --off
+  xrandr --output DP-1-8 --off
   i3 restart
 
 else
