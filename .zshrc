@@ -1,5 +1,9 @@
-# Set up the prompt
+# Use tmux by default
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
+# Set up the prompt
 autoload -Uz promptinit
 promptinit
 prompt adam1
@@ -71,3 +75,5 @@ function zle-line-finish {
 zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
+
+
