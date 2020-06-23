@@ -41,7 +41,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_HOME_ICON=''
 POWERLEVEL9K_HOME_SUB_ICON=''
 POWERLEVEL9K_FOLDER_ICON=''
@@ -49,7 +49,7 @@ POWERLEVEL9K_ETC_ICON=''
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs status)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 function zle-keymap-select zle-line-init {
   if [ $KEYMAP = vicmd ]; then
@@ -71,11 +71,3 @@ function zle-line-finish {
 zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
-
-source ~/src/personal/docker-dev-envs/utils.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
