@@ -23,6 +23,11 @@ HISTFILE=~/.zsh_history
 # Use 256 colours
 export TERM="xterm-256color"
 
+
+# Use asdf with compinit
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
