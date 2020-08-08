@@ -2,13 +2,13 @@
 
 set -eux
 
-if xrandr | grep connected | grep -q "^HDMI-1"; then
+if xrandr | grep connected | grep -q "^HDMI1"; then
 
-  echo "Configuring HDMI-1 monitor."
-  xrandr --output HDMI-1 --auto
-  xrandr --output HDMI-1 --right-of eDP-1
+  echo "Configuring HDMI1 monitor."
+  xrandr --output HDMI1 --auto
+  xrandr --output HDMI1 --right-of eDP1
 
-  xrandr --output eDP-1 --off
+  xrandr --output eDP1 --off
   i3 restart
 
 else
