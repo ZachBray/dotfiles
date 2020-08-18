@@ -3,17 +3,15 @@
 set -eux
 connected_monitors=$(xrandr | grep connected)
 
-if echo $connected_monitors | grep -q "eDP-1"; then
+if echo $connected_monitors | grep -q "eDP1"; then
 
-  echo "Configuring eDP-1 monitor."
-  xrandr --output eDP-1 --auto
-  xrandr --output DP-1 --off
-  xrandr --output DP-2 --off
-  xrandr --output DP-1-8 --off
+  echo "Configuring eDP1 monitor."
+  xrandr --output eDP1 --auto
+  xrandr --output HMDI1 --off
   i3 restart
 
 else
 
-  echo "eDP-1  monitor not found."
+  echo "eDP1  monitor not found."
 
 fi
