@@ -1,0 +1,61 @@
+{
+    "vim.ignorecase": false,
+    "vim.incsearch": false,
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-j>": true,
+        "<C-k>": true
+    },
+    "vim.insertModeKeyBindings": [{
+        "before": ["<C-j>"],
+        "after": ["<C-n>"],
+        "commands": []
+    }, {
+        "before": ["<C-k>"],
+        "after": ["<C-p>"],
+        "commands": []
+    }],
+    "vim.normalModeKeyBindings": [{
+        "before": ["<leader>", "h"],
+        "commands": ["workbench.action.navigateBack"]
+    }, {
+        "before": ["<leader>", "l"],
+        "commands": ["workbench.action.navigateForward"]
+    }, {
+        "before": ["<leader>", "j"],
+        "commands": ["editor.action.marker.prevInFiles"]
+    }, {
+        "before": ["<leader>", "k"],
+        "commands": ["editor.action.marker.nextInFiles"]
+    }, {
+        "before": ["<leader>", "t"],
+        "commands": ["editor.action.showHover"]
+    }, {
+        "before": ["<leader>", "i"],
+        "commands": ["editor.action.quickFix"]
+    }, {
+        "before": ["<C-[>"],
+        "commands": ["editor.action.goToReferences"]
+    }, {
+        "before": ["<leader>", "e"],
+        "commands": ["editor.action.rename"]
+    }, {
+        "before": ["<leader>", "r"],
+        "commands": ["editor.action.refactor"]
+    }],
+    "vim.visualModeKeyBindings": [{
+        "before": ["<leader>", "h"],
+        "commands": ["workbench.action.navigateBack"]
+    }, {
+        "before": ["<leader>", "l"],
+        "commands": ["workbench.action.navigateForward"]
+    }, {
+        "before": ["<leader>", "j"],
+        "commands": ["editor.action.marker.prevInFiles"]
+    }, {
+        "before": ["<leader>", "k"],
+        "commands": ["editor.action.marker.nextInFiles"]
+    }
+],
+"window.zoomLevel": 0,
+}
