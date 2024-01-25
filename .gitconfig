@@ -1,6 +1,8 @@
 [user]
 	name = Zach Bray
 	email = zachbray@googlemail.com
+  # https://security.stackexchange.com/questions/153579/is-it-safe-to-share-your-gitconfigs-user-signingkey-value-with-the-world
+	signingkey = CFD7AEDBE7647881
 [core]
 	editor = vim
 [diff]
@@ -14,3 +16,5 @@
 	tool = vimdiff
 [mergetool]
 	prompt = false
+[commit]
+	gpgsign = true
