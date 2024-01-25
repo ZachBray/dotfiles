@@ -84,3 +84,9 @@ zle -N zle-keymap-select
 # opam configuration
 [[ ! -r /home/zach/.opam/opam-init/init.zsh ]] || source /home/zach/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
+# GPG configuration
+export GPG_TTY=$(tty)
+
+# Go
+export PATH=$PATH:/usr/local/go/bin
+export PATH=${PATH}:`go env GOPATH`/bin

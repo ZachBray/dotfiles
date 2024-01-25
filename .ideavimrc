@@ -5,41 +5,39 @@ let maplocalleader = '\'
 set easymotion
 
 " Auto-completion keymaps
-nnoremap <leader>i :action ShowIntentionActions<CR>
+map <leader>i :action ShowIntentionActions<CR>
 
 " Navigation
-nnoremap <leader>h :action Back<CR>
-nnoremap <leader>l :action Forward<CR>
-nnoremap <leader>j :action GotoNextError<CR>
-nnoremap <leader>k :action GotoPreviousError<CR>
-nnoremap <leader>n :action NextOccurence<CR>
-nnoremap <leader>p :action PreviousOccurence<CR>
-nnoremap <leader>m :action FileStructurePopup<CR>
-nnoremap <C-[> :action ShowUsages<CR>
-nnoremap <C-S-[> :action FindUsages<CR>
-nnoremap <C-S-]> :action GotoImplementation<CR>
-" These are broken in 2018.* because of keyboard focus
-" noremap <C-p> :action GotoFile<CR>
-" noremap <C-S-p> :action GotoSymbol<CR>
-" noremap <C-A-p> :action RecentFiles<CR>
-nnoremap ]h :action VcsShowPrevChangeMarker<CR>
-nnoremap [h :action VcsShowNextChangeMarker<CR>
+map <leader>h <Action>(Back)
+map <leader>l <Action>(Forward)
+map <leader>j <Action>(GotoNextError)
+map <leader>k <Action>(GotoPreviousError)
+map <leader>n <Action>(NextOccurence)
+map <leader>p <Action>(PreviousOccurence)
+map <leader>m <Action>(FileStructurePopup)
+map <C-[> <Action>(ShowUsages)
+map <C-S-[> <Action>(FindUsages)
+map <C-S-]> <Action>(GotoImplementation)
+map <C-p> <Action>(GotoFile)
+map <C-S-p> <Action>(GotoSymbol)
+map ]h <Action>(VcsShowPrevChangeMarker)
+map [h <Action>(VcsShowNextChangeMarker<CRmap
 
 " Code editing
-nnoremap <leader>e :action RenameElement<CR>
+map <leader>e <Action>(RenameElement)
 
 " Code generation
-nnoremap <leader>gc :action NewClass<CR>
-nnoremap <leader>ge :action NewEnum<CR>
-nnoremap <leader>gi :action NewInterface<CR>
-nnoremap <leader>gf :action NewFile<CR>
-nnoremap <leader>gg :action Generate<CR>
+map <leader>gc <Action>(NewClass)
+map <leader>ge <Action>(NewEnum)
+map <leader>gi <Action>(NewInterface)
+map <leader>gf <Action>(NewFile)
+map <leader>gg <Action>(Generate)
 
 " Code linting
-nnoremap <leader>rf :action ReformatCode<CR>
-nnoremap <leader>ro :action OptimizeImports<CR>
+map <leader>rf <Action>(ReformatCode)
+map <leader>ro <Action>(OptimizeImports)
 
 " Execution
-nnoremap <leader>xr :action Run<CR>
-nnoremap <leader>xd :action Debug<CR>
+map <leader>xr <Action>(Run)
+map <leader>xd <Action>(Debug)
 
